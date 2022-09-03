@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_animasyon/model/country_model.dart';
 
 class LocalJson extends StatefulWidget {
   const LocalJson({Key? key}) : super(key: key);
@@ -22,10 +23,14 @@ class _LocalJsonState extends State<LocalJson> {
     /*var */ String readString = await DefaultAssetBundle.of(context)
         .loadString("assets/daya/country.jyson");
     var jsonObject = jsonDecode(readString);
-    debugPrint(readString);
+    /* debugPrint(readString);
     // (jsonObject as List).map((e) => debugPrint(e.toString()));
     //debugPrint(jsonObject.toString());
     List countryList = jsonObject;
-    debugPrint(countryList[0]["President"][0].toString());
+    debugPrint(countryList[0]["President"][0].toString());*/
+
+    List<Country> allcountry = jsonObject;
+
+    debugPrint(allcountry.length.toString());
   }
 }
