@@ -29,7 +29,10 @@ class _LocalJsonState extends State<LocalJson> {
     List countryList = jsonObject;
     debugPrint(countryList[0]["President"][0].toString());*/
 
-    List<Country> allcountry = jsonObject;
+    List<Country> allcountry = (jsonObject as List)
+        .map((countryMap) => Country.fromMap(countryMap))
+        .toList();
+    //debugPrint(allcountry[0].president);
 
     debugPrint(allcountry.length.toString());
   }
