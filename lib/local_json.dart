@@ -11,10 +11,23 @@ class LocalJson extends StatefulWidget {
 }
 
 class _LocalJsonState extends State<LocalJson> {
+  String _title = "Local Json";
+  late final Future<List<Country>> _fllingList;
+  @override
+  void initState() {
+    super.initState();
+    _fllingList = countryJysonRead();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Local Jyson")),
+      appBar: AppBar(title: Text(_title)),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        setState(() {
+          debugPrint("Clik");
+        });
+      }),
       body: FutureBuilder<List<Country>>(
         future: countryJysonRead(),
         builder: ((context, snapshot) {
@@ -24,9 +37,10 @@ class _LocalJsonState extends State<LocalJson> {
             return ListView.builder(
               itemCount: countryList.length,
               itemBuilder: (context, index) {
+                Country nowCountry = countryList[index];
                 return ListTile(
-                  title: Text(countryList[index].countryName),
-                  subtitle: Text(countryList[index].countryCapital),
+                  title: Text(nowCountry.countryName),
+                  subtitle: Text(nowCountry.countryCapital),
                 );
               },
             );
