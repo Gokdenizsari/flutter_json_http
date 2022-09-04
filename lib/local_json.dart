@@ -29,7 +29,8 @@ class _LocalJsonState extends State<LocalJson> {
         });
       }),
       body: FutureBuilder<List<Country>>(
-        future: countryJysonRead(),
+        future: _fllingList,
+        initialData: [Country(countryCapital: "berlin",countryName: "Germany",president: "",yearOfFoundation: 1868)],
         builder: ((context, snapshot) {
           if (snapshot.hasData) {
             List<Country> countryList = snapshot.data!;
