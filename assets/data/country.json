@@ -1,0 +1,30 @@
+[
+    {
+        "Country_Name": "Germany",
+        "Country_Capital": "Berlin",
+        "Year_of_Foundation": 1990,
+        "President": "Frank Walter Steinmeier"
+        
+    },
+    {
+        "Country_Name": "Japan",
+        "Country_Capital": "Tokyo",
+        "Year_of_Foundation": 1868,
+        "President": "Fumiyo Kişida"
+        
+    },
+    {
+        "Country_Name": "France",
+        "Country_Capital": "Paris",
+        "Year_of_Foundation": 508,
+        "President": "Emmanuel Macron"
+        
+    },
+    {
+        "Country_Name": "Canada",
+        "Country_Capital": "Ottowa",
+        "Year_of_Foundation": 1857,
+        "President": "Justin Trudeau"
+        
+    }
+]
